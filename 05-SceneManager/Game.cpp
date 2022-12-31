@@ -176,7 +176,7 @@ void CGame::Draw(float x, float y, LPTEXTURE tex, RECT* rect, float alpha, int s
 
 	D3DX10_SPRITE sprite;
 
-	// Set the sprite’s shader resource view
+	// Set the spriteï¿½s shader resource view
 	sprite.pTexture = tex->getShaderResourceView();
 
 	if (rect == NULL)
@@ -226,7 +226,7 @@ void CGame::Draw(float x, float y, LPTEXTURE tex, RECT* rect, float alpha, int s
 	D3DXMATRIX matScaling;
 	D3DXMatrixScaling(&matScaling, (FLOAT)spriteWidth, (FLOAT)spriteHeight, 1.0f);
 
-	// Setting the sprite’s position and size
+	// Setting the spriteï¿½s position and size
 	sprite.matWorld = (matScaling * matTranslation);
 
 	spriteObject->DrawSpritesImmediate(&sprite, 1, 0, 0);
@@ -453,12 +453,34 @@ void CGame::_ParseSection_SCENES(string line)
 {
 	vector<string> tokens = split(line);
 
+	DebugOut(L"[INFO] tokens: %s\n", tokens);
 	if (tokens.size() < 2) return;
 	int id = atoi(tokens[0].c_str());
 	LPCWSTR path = ToLPCWSTR(tokens[1]);   // file: ASCII format (single-byte char) => Wide Char
 
 	LPSCENE scene = new CPlayScene(id, path);
+
+	switch (scene_type)
+	{
+	case SCENCE_TYPE_INTRO: {
+		scene = new CIntroScene(id, path); 
+		break; 
+	}
+	case SCENCE_TYPE_WORLD: {
+		scene = new CWorldScene(id, path);
+		break; 
+	}
+	case SCENCE_TYPE_PLAY: {
+		scene = new CPlayScene(id, path);
+		break; 
+	}
+	default:
+		DebugOut(L"Scene unknown \n");
+		break;
+	}
+
 	scenes[id] = scene;
+
 }
 
 /*
