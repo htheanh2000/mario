@@ -34,6 +34,18 @@
     <Filter Include="Map Objects\Goomba">
       <UniqueIdentifier>{771681ce-e6f4-4f52-9431-6769b61383dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scenes\Intro">
+      <UniqueIdentifier>{a390a2d1-f603-4d46-aa68-fec34c8b10be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Play">
+      <UniqueIdentifier>{f6730409-94a2-4dea-915b-b168a341238d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map Objects\Game Object">
+      <UniqueIdentifier>{63be5bef-2348-4f23-912f-cde0d2626603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map Objects\Background">
+      <UniqueIdentifier>{cd2a13b0-cf30-4564-ae1b-cc5ab1e10332}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -57,9 +69,6 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Platform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -78,12 +87,6 @@
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlayScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="OpeningScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="Mario.cpp">
       <Filter>Map Objects\Mario</Filter>
     </ClCompile>
@@ -98,6 +101,18 @@
     </ClCompile>
     <ClCompile Include="Goomba.cpp">
       <Filter>Map Objects\Goomba</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroScene.cpp">
+      <Filter>Scenes\Intro</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>Scenes\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Map Objects\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Map Objects\Background</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,9 +135,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="KeyEventHandler.h">
@@ -149,9 +161,6 @@
     <ClInclude Include="Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PlayScene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
@@ -170,8 +179,17 @@
     <ClInclude Include="Goomba.h">
       <Filter>Map Objects\Goomba</Filter>
     </ClInclude>
-    <ClInclude Include="OpeningScene.h">
-      <Filter>Scenes</Filter>
+    <ClInclude Include="IntroScene.h">
+      <Filter>Scenes\Intro</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h">
+      <Filter>Scenes\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Map Objects\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Map Objects\Background</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
