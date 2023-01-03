@@ -46,6 +46,15 @@
     <Filter Include="Map Objects\Background">
       <UniqueIdentifier>{cd2a13b0-cf30-4564-ae1b-cc5ab1e10332}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Map Objects\Ground">
+      <UniqueIdentifier>{a21b90e2-d334-473e-9415-956fc5a87bfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map Objects\Tree">
+      <UniqueIdentifier>{7c606753-941b-4960-83fd-184372a93705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map Objects\Bush">
+      <UniqueIdentifier>{fbb2a3ee-875a-432a-ad9f-b45e6901764c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -113,6 +122,15 @@
     </ClCompile>
     <ClCompile Include="Background.cpp">
       <Filter>Map Objects\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="Ground.cpp">
+      <Filter>Map Objects\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Map Objects\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="Bush.cpp">
+      <Filter>Map Objects\Bush</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +208,15 @@
     </ClInclude>
     <ClInclude Include="Background.h">
       <Filter>Map Objects\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground.h">
+      <Filter>Map Objects\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Map Objects\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Bush.h">
+      <Filter>Map Objects\Bush</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,0 +1,23 @@
+# id	left	top	right	bottom	texture_id
+[SPRITES]
+
+#Right Đỉnh
+70001	128	0	144	16	40
+
+#Left  Đỉnh
+71001	144	0	160	16	40
+
+#Right Thân
+72001	128	16	144	32	40
+
+#Left Thân
+73001	144	16	160	32	40
+
+
+
+# ani_id	sprite1_id	time1	sprite2_id	time2	...
+[ANIMATIONS]
+70000	70001	1000
+71000	71001	1000
+72000	72001	1000
+73000	73001	1000

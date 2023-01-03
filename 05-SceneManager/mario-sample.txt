@@ -1,5 +1,5 @@
 [SETTINGS]
-start	1   // Màn hình bắt đầu ở đây nhé, chỉnh về 1 là okila
+start	1
 width	320
 height	240
 
@@ -7,9 +7,9 @@ height	240
 # type: 0: intro, 1: play scene 
 [SCENES]
 0	intro.txt
-1	intro.txt
-2	intro.txt
-5	intro.txt
+1	scene01.txt
+2	scene02.txt
+5	scene0005.txt
 
 # id	file 
 [TEXTURES]
@@ -18,3 +18,4 @@ height	240
 10	textures\enemies.png
 20	textures\misc.png
 30	textures\scenes\intro_scene.png
+40	textures\scenes\world-1-1.png

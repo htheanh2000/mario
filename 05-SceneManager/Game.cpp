@@ -458,7 +458,7 @@ void CGame::_ParseSection_SCENES(string line)
 	int id = atoi(tokens[0].c_str());
 	LPCWSTR path = ToLPCWSTR(tokens[1]);   // file: ASCII format (single-byte char) => Wide Char
 
-	LPSCENE scene = new CIntroScene(id, path);
+	LPSCENE scene = new CPlayScene(id, path);
 	int scene_type = -1;
 	if (tokens.size() > 3)
 		scene_type = atoi(tokens[2].c_str()); // Get Scene type
@@ -466,15 +466,15 @@ void CGame::_ParseSection_SCENES(string line)
 	switch (scene_type)
 	{
 	case INTRO_SCENE: {
-		scene = new CIntroScene(id, path);
+		scene = new CPlayScene(id, path);
 		break; 
 	}
 	case WORLD_SCENE: {
-		scene = new CIntroScene(id, path);
+		scene = new CPlayScene(id, path);
 		break; 
 	}
 	case PLAY_SCENE: {
-		scene = new CIntroScene(id, path);
+		scene = new CPlayScene(id, path);
 		break; 
 	}
 	default:

@@ -10,7 +10,7 @@
 #include "Coin.h"
 #include "Platform.h"
 #include "Background.h"
-
+#include "Ground.h"
 #include "SampleKeyEventHandler.h"
 
 using namespace std;
@@ -101,16 +101,22 @@ void CIntroScene::_ParseSection_OBJECTS(string line)
 	int object_type = atoi(tokens[0].c_str());
 	float x = (float)atof(tokens[1].c_str());
 	float y = (float)atof(tokens[2].c_str()); 
-	// get intro id 
-	int intro_id = atoi(tokens[3].c_str());
+
 	CGameObject* obj = NULL;
 
-	obj = new CBackground(x, y, intro_id);
+	switch (object_type)
+	{
+	case OBJECT_TYPE_GOOMBA: obj = new CBackground(x, y); break;
+	case OBJECT_TYPE_GROUND: obj = new CGround(x, y); break;
+	case OBJECT_TYPE_BRICK: obj = new CGround(x, y); break;
+	default:
+		DebugOut(L"[ERROR] Invalid object type: %d\n", object_type);
+		return;
+	}
+
 	
 	// General object setup
 	obj->SetPosition(x, y);
-
-	//obj->SetState(60000);
 
 	objects.push_back(obj);
 }

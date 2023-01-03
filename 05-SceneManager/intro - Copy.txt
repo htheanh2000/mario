@@ -1,0 +1,14 @@
+# list of object assets to load in this scene
+[ASSETS]
+IntroScene/background.txt
+
+[OBJECTS]
+# type	x	y	extra_settings type  vx vy  delay des_x des_y
+# See OBJECT_TYPE constants in AssetIDs.h 
+
+# BACKGROUND
+
+
+#1	128	93	60000	0	-0.1	0	128	43
+1	300	10	60001	0	0	0	0	0
+#1	128	-189	60002	0	0.1	0	0	0

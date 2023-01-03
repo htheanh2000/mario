@@ -1,13 +1,26 @@
 # list of object assets to load in this scene
 [ASSETS]
-IntroScene/background.txt
-
+mario.txt
+brick.txt
+coin.txt
+goomba.txt
+cloud.txt
+ground.txt
+#
 [OBJECTS]
 # type	x	y	extra_settings per object type
+# type: 0 = Mario , 1 = Brick, 2 = Goomba, 3 = Koopas
 # See OBJECT_TYPE constants in AssetIDs.h
 
-# BACKGROUND
+
+# GROUND
+
+# don't know why need duplicate Ground ?
+6	120	200
+6	120	200
 
 
-1	128	93	60000
-1	128	200	60001
+
+#Goomba
+2	120	100
+
