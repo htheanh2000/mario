@@ -1,9 +1,15 @@
 #include "Brick.h"
 
+
+CBrick::CBrick(float x, float y, int ani_id) : CGameObject(x, y) {
+	this->ani_id = ani_id;
+}
+
+
 void CBrick::Render()
 {
 	CAnimations* animations = CAnimations::GetInstance();
-	animations->Get(ID_ANI_BRICK)->Render(x, y);
+	animations->Get(ani_id)->Render(x, y);
 	//RenderBoundingBox();
 }
 

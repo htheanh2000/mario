@@ -55,6 +55,9 @@
     <Filter Include="Map Objects\Bush">
       <UniqueIdentifier>{fbb2a3ee-875a-432a-ad9f-b45e6901764c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Map Objects\Block">
+      <UniqueIdentifier>{cb59bce8-e4f2-4748-a81e-9b7e8f1ed19e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -131,6 +134,9 @@
     </ClCompile>
     <ClCompile Include="Bush.cpp">
       <Filter>Map Objects\Bush</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Map Objects\Block</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +223,9 @@
     </ClInclude>
     <ClInclude Include="Bush.h">
       <Filter>Map Objects\Bush</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Map Objects\Block</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

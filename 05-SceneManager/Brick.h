@@ -10,8 +10,9 @@
 #define BRICK_BBOX_HEIGHT 16
 
 class CBrick : public CGameObject {
+	int ani_id;
 public:
-	CBrick(float x, float y) : CGameObject(x, y) {}
+	CBrick(float x, float y, int ani_id);
 	void Render();
 	void Update(DWORD dt) {}
 	void GetBoundingBox(float& l, float& t, float& r, float& b);

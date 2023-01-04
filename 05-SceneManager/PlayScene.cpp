@@ -117,12 +117,18 @@ void CPlayScene::_ParseSection_OBJECTS(string line)
 		DebugOut(L"[INFO] Player object has been created!\n");
 		break;
 	case OBJECT_TYPE_GOOMBA: obj = new CGoomba(x, y); break;
-	case OBJECT_TYPE_BRICK: obj = new CBrick(x, y); break;
+	case OBJECT_TYPE_BRICK: {
+		int ani_id = atoi(tokens[3].c_str());
+		obj = new CBrick(x, y, ani_id); break;
+	}
 	case OBJECT_TYPE_COIN: obj = new CCoin(x, y); break;
-	case OBJECT_TYPE_BUSH: obj = new CBush(x, y); break;
 	case OBJECT_TYPE_TREE: {
 		int ani_id = atoi(tokens[3].c_str());
 		obj = new CTree(x, y, ani_id); break;
+	}
+	case OBJECT_TYPE_BLOCK: {
+		int ani_id = atoi(tokens[3].c_str());
+		obj = new CBlock(x, y, ani_id); break;
 	}
 
 	case OBJECT_TYPE_PLATFORM:
