@@ -270,8 +270,9 @@ void CPlayScene::Update(DWORD dt)
 	cy -= game->GetBackBufferHeight() / 2;
 
 	if (cx < 0) cx = 0;
-
-	CGame::GetInstance()->SetCamPos(cx, 0.0f /*cy*/);
+	if (cy > MAX_HEIGH_CAMERA_Y_ACTICE) cy = 0.0f;
+	else cy = cy - MAX_HEIGH_CAMERA_Y_ACTICE;
+		CGame::GetInstance()->SetCamPos(cx, cy );
 
 	PurgeDeletedObjects();
 }

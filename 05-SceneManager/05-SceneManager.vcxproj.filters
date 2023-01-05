@@ -58,6 +58,9 @@
     <Filter Include="Map Objects\Block">
       <UniqueIdentifier>{cb59bce8-e4f2-4748-a81e-9b7e8f1ed19e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Map Objects\Platform">
+      <UniqueIdentifier>{71d6e6fc-6561-409a-9d77-3b741ef33528}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -79,9 +82,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SampleKeyEventHandler.cpp">
@@ -138,6 +138,9 @@
     <ClCompile Include="Block.cpp">
       <Filter>Map Objects\Block</Filter>
     </ClCompile>
+    <ClCompile Include="Platform.cpp">
+      <Filter>Map Objects\Platform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -162,9 +165,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="KeyEventHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SampleKeyEventHandler.h">
@@ -226,6 +226,9 @@
     </ClInclude>
     <ClInclude Include="Block.h">
       <Filter>Map Objects\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>Map Objects\Platform</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,6 +11,8 @@
 #include "Block.h"
 //#include "Koopas.h"
 
+#define MAX_HEIGH_CAMERA_Y_ACTICE -80.0f
+
 
 class CPlayScene: public CScene
 {
