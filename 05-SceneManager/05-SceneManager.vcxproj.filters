@@ -61,6 +61,12 @@
     <Filter Include="Map Objects\Platform">
       <UniqueIdentifier>{71d6e6fc-6561-409a-9d77-3b741ef33528}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{32454727-9eae-4d9f-a211-93d0a183b9ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map Objects\QuestionBrick">
+      <UniqueIdentifier>{4d0cad86-3281-4c93-87f4-5c94ef5fbca3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -140,6 +146,9 @@
     </ClCompile>
     <ClCompile Include="Platform.cpp">
       <Filter>Map Objects\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Time</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +238,9 @@
     </ClInclude>
     <ClInclude Include="Platform.h">
       <Filter>Map Objects\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Time</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

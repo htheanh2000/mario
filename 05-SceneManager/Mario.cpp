@@ -289,6 +289,19 @@ void CMario::SetState(int state)
 	case MARIO_STATE_RELEASE_JUMP:
 		if (vy < 0) vy += MARIO_JUMP_SPEED_Y / 2;
 		break;
+	case MARIO_STATE_FLY:
+		if (isSitting) break;
+		if (isOnPlatform)
+		{
+			ay = 0;
+			vy = -MARIO_FLY_SPEED_Y;
+		}
+		break;
+
+	case MARIO_STATE_RELEASE_FLY:
+		ay = MARIO_FALL_SPEED_Y;
+		if (vy < 0) vy += MARIO_FLY_SPEED_Y ;
+		break;
 
 	case MARIO_STATE_SIT:
 		if (isOnPlatform && level != MARIO_LEVEL_SMALL)
