@@ -126,6 +126,10 @@ void CPlayScene::_ParseSection_OBJECTS(string line)
 		int ani_id = atoi(tokens[3].c_str());
 		obj = new CTree(x, y, ani_id); break;
 	}
+	case OBJECT_TYPE_PIPE: {
+		int ani_id = atoi(tokens[3].c_str());
+		obj = new CPipe(x, y, ani_id); break;
+	}
 	case OBJECT_TYPE_BLOCK: {
 		int ani_id = atoi(tokens[3].c_str());
 		obj = new CBlock(x, y, ani_id); break;

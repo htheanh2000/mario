@@ -67,6 +67,9 @@
     <Filter Include="Map Objects\QuestionBrick">
       <UniqueIdentifier>{4d0cad86-3281-4c93-87f4-5c94ef5fbca3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Map Objects\Pipe">
+      <UniqueIdentifier>{afc8d8dd-6d17-457f-a0aa-7a8ceacbe6a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -149,6 +152,9 @@
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Pipe.cpp">
+      <Filter>Map Objects\Pipe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +247,9 @@
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Pipe.h">
+      <Filter>Map Objects\Pipe</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
