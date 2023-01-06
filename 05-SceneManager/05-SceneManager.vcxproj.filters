@@ -156,6 +156,9 @@
     <ClCompile Include="Pipe.cpp">
       <Filter>Map Objects\Pipe</Filter>
     </ClCompile>
+    <ClCompile Include="QuesionBrick.cpp">
+      <Filter>Map Objects\QuestionBrick</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -250,6 +253,9 @@
     </ClInclude>
     <ClInclude Include="Pipe.h">
       <Filter>Map Objects\Pipe</Filter>
+    </ClInclude>
+    <ClInclude Include="QuesionBrick.h">
+      <Filter>Map Objects\QuestionBrick</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
