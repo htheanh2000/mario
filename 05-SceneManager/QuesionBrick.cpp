@@ -20,3 +20,13 @@ void CQuestionBrick::GetBoundingBox(float& l, float& t, float& r, float& b)
 	r = l + BRICK_BBOX_WIDTH;
 	b = t + BRICK_BBOX_HEIGHT;
 }
+
+
+void CQuestionBrick::ActivateEffect() {
+	CGameObject* obj = NULL; 
+	obj = new CCoin(x, y-16);
+	dynamic_cast<CPlayScene*>(CGame::GetInstance()->GetCurrentScene())->add(obj);
+	//RenderBoundingBox();
+}
+
+

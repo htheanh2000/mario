@@ -11,8 +11,11 @@
 #define COIN_BBOX_HEIGHT 16
 
 class CCoin : public CGameObject {
+protected: 
+	int id = ID_ANI_COIN;
 public:
 	CCoin(float x, float y) : CGameObject(x, y) {}
+	CCoin(float x, float y, float id) : CGameObject(x, y) { this->id = id; }
 	void Render();
 	void Update(DWORD dt) {}
 	void GetBoundingBox(float& l, float& t, float& r, float& b);

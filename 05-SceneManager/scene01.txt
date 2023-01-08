@@ -4,7 +4,6 @@ mario.txt
 brick.txt
 coin.txt
 goomba.txt
-c^toud.txt
 tree.txt
 block.txt
 pipe.txt
@@ -611,7 +610,7 @@ quesBrick.txt
 10	1456	128
 
 #Goomba
-2	300	10
+#2	300	10
 
 
 # MARIO

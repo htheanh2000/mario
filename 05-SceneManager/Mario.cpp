@@ -7,6 +7,7 @@
 #include "Goomba.h"
 #include "Coin.h"
 #include "Portal.h"
+#include "QuesionBrick.h"
 
 #include "Collision.h"
 
@@ -54,6 +55,8 @@ void CMario::OnCollisionWith(LPCOLLISIONEVENT e)
 		OnCollisionWithCoin(e);
 	else if (dynamic_cast<CPortal*>(e->obj))
 		OnCollisionWithPortal(e);
+	else if (dynamic_cast<CQuestionBrick*>(e->obj))
+		OnCollisionWithQuestionBrick(e);
 }
 
 void CMario::OnCollisionWithGoomba(LPCOLLISIONEVENT e)
@@ -96,10 +99,22 @@ void CMario::OnCollisionWithCoin(LPCOLLISIONEVENT e)
 	coin++;
 }
 
+void CMario::OnCollisionWithQuestionBrick(LPCOLLISIONEVENT e)
+{
+	CQuestionBrick* p = (CQuestionBrick*)e->obj;
+	p->ActivateEffect();
+	float cx, cy;
+	p->GetPosition(cx,cy);
+	CAnimations* animations = CAnimations::GetInstance();
+	DebugOut(L"Position cx: %d", cx );
+	DebugOut(L"Position cy: %d", cy);
+	//e->obj->Delete();
+}
+
 void CMario::OnCollisionWithPortal(LPCOLLISIONEVENT e)
 {
 	CPortal* p = (CPortal*)e->obj;
-	CGame::GetInstance()->InitiateSwitchScene(p->GetSceneId());
+	e->obj->Delete();
 }
 
 //
@@ -287,7 +302,7 @@ void CMario::SetState(int state)
 		break;
 
 	case MARIO_STATE_RELEASE_JUMP:
-		if (vy < 0) vy += MARIO_JUMP_SPEED_Y / 2;
+		if (vy < 0) vy += MARIO_JUMP_SPEED_Y /20;
 		break;
 	case MARIO_STATE_FLY:
 		if (isSitting) break;

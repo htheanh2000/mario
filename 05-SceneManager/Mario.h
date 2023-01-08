@@ -12,8 +12,8 @@
 #define MARIO_ACCEL_WALK_X	0.0005f
 #define MARIO_ACCEL_RUN_X	0.0007f
 
-#define MARIO_JUMP_SPEED_Y		0.7f
-#define MARIO_JUMP_RUN_SPEED_Y	0.8f
+#define MARIO_JUMP_SPEED_Y		0.5f
+#define MARIO_JUMP_RUN_SPEED_Y	0.6f
 
 #define MARIO_FLY_SPEED_Y		0.08f
 #define MARIO_FALL_SPEED_Y		0.0002f
@@ -123,6 +123,7 @@ class CMario : public CGameObject
 	void OnCollisionWithGoomba(LPCOLLISIONEVENT e);
 	void OnCollisionWithCoin(LPCOLLISIONEVENT e);
 	void OnCollisionWithPortal(LPCOLLISIONEVENT e);
+	void OnCollisionWithQuestionBrick(LPCOLLISIONEVENT e);
 
 	int GetAniIdBig();
 	int GetAniIdSmall();
